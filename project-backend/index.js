@@ -34,10 +34,17 @@ app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
 app.use(morgan("common"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cors({
-  origin: "https://capstone-project-17b9.onrender.com",
-  credentials: true
-}));
+app.use(cors());
+
+app.post("/...", (req, res) =>{
+  res.set('Access-Control-Allow-Origin', '*');
+//whatever you want here
+})
+
+// app.use(cors({
+//   origin: "https://capstone-project-17b9.onrender.com",
+//   credentials: true
+// }));
 
 // Routes
 app.use("/client", clientRoutes);

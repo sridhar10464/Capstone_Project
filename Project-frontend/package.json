@@ -2,6 +2,7 @@
   "name": "project-frontend",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:5001",
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
@@ -34,8 +35,8 @@
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest",
-      "react-app/base"
+      "react-app/jest"
+      
     ]
   },
   "browserslist": {

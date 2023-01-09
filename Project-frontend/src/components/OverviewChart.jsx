@@ -41,6 +41,8 @@ const OverviewChart = ({ isDashboard = false, view }) => {
             },
             { sales: 0, units: 0 }
           );
+
+          return[[totalSalesLine], [totalUnitsLine]];
     }, [data]);
 
     if (!data || isLoading) return "Loading...";
